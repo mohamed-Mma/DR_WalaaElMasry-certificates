@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programming Chapters Archive | Dr. Walaa El-Masry</title>
+  <meta name="description" content="Interactive archive of student programming certificates. A record of progress, practice, and achievement.">
+  <link rel="icon" type="image/webp" href="assets/images/logo.webp">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Intro Screen -->
+  <section id="intro-screen" class="screen active">
+    <div class="logo-container">
+      <img src="assets/images/logo.webp" alt="Programming & AI Logo">
+    </div>
+    <h1 class="main-title">PROGRAMMING<br>CHAPTERS ARCHIVE</h1>
+    <p class="subtitle">A record of progress, practice, and achievement.</p>
+    <button id="start-btn" class="start-btn">START</button>
+  </section>
+
+  <!-- Chapters Screen -->
+  <section id="chapters-screen" class="screen">
+    <header class="header">
+      <h2>PROGRAMMING ARCHIVE</h2>
+      <span class="chapters-count">7 CHAPTERS</span>
+    </header>
+    <p class="header-subtitle">SELECT A CHAPTER TO EXPLORE ITS CERTIFICATES.</p>
+    <div style="padding: 0 4vw 1rem;">
+      <button class="back-btn" id="back-to-welcome">← BACK TO WELCOME</button>
+    </div>
+    <div id="chapters-list" class="chapters-list"></div>
+    <footer class="footer">
+      <p>Dr. Walaa El-Masry &bull; Programming & AI</p>
+      <p style="margin-top: 0.5rem;">
+        <a href="https://linktr.ee/DR_WalaaElMasry" target="_blank" rel="noopener">Linktree</a>
+        &nbsp;|&nbsp;
+        <a href="tel:01157566942">01157566942</a>
+      </p>
+    </footer>
+  </section>
+
+  <!-- Certificates Screen -->
+  <section id="certs-screen" class="screen">
+    <div class="certs-header">
+      <button class="back-btn back-to-chapters">← BACK TO CHAPTERS</button>
+    </div>
+    <h2 id="certs-chapter-title" class="certs-title">CHAPTER 01</h2>
+    <p class="certs-subtitle" id="certs-subtitle">Celebrating the students who completed Chapter One.</p>
+    <div id="certs-grid" class="certs-grid"></div>
+  </section>
+
+  <!-- To Be Continued Screen -->
+  <section id="tbc-screen" class="screen">
+    <div class="tbc-bg-number" id="tbc-number">03</div>
+    <div class="tbc-content">
+      <h2 id="tbc-title">CHAPTER 03</h2>
+      <p id="tbc-message">CONTENT NOT RELEASED</p>
+      <div class="terminal-line">$ initializing next chapter...</div>
+      <div class="terminal-line">$ status: pending examination</div>
+      <div class="terminal-line">$ TO BE CONTINUED...</div>
+      <p style="margin-top: 1.5rem; color: var(--text-secondary);">The next chapter is waiting to be unlocked.</p>
+      <button class="back-btn back-to-chapters" style="margin-top: 2rem;">← BACK TO CHAPTERS</button>
+    </div>
+  </section>
+
+  <!-- Certificate Modal -->
+  <div id="certificate-modal" class="modal">
+    <div class="modal-content">
+      <button class="close-modal" id="close-modal">&times;</button>
+      <img id="modal-image" class="modal-image" alt="Certificate">
+      <div class="modal-info">
+        <span id="modal-student" style="font-weight: 600;"></span>
+        <button class="view-btn" style="width: auto; padding: 0.5rem 1.5rem;" onclick="downloadCertificate()">DOWNLOAD</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/chapters.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
